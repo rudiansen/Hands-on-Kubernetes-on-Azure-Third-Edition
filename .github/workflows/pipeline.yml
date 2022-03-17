@@ -37,7 +37,7 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
           
       - name: ACR login
-        uses: az acr login -n $ACRNAME
+        run: az acr login -n $ACRNAME
         
       - name: Build and push image
         uses: docker/build-push-action@v2
